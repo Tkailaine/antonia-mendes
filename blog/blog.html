@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .blog-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 15px 0 10px;
+        }
+
+        .blog-summary {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .pagination {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .pagination a:hover {
+            text-decoration: underline;
+        }
+
+        .news-page {
+            display: none;
+        }
+
+        .news-page h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .news-page p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .btn-inicio{
+            display: block;
+            border: none;
+            width: 120px;
+            height: 30px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2em;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.178);
+            background-color: #007BFF;
+            margin: 50px auto;
+            cursor: pointer;
+        }
+
+        .btn-inicio:hover{
+            background-color: #022d5c;
+            transition-duration: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notícias</h1>
+        <!-- Grid de notícias -->
+        <div id="news-container" class="blog-grid">
+            
+            <div class="blog-card" data-title="TJ/DF Mantém Condenação de Homem por Estelionato Contra Ex-Companheira"
+            data-content="
+
+            <article>
+        
+            <p>O Tribunal de Justiça do Distrito Federal (TJ/DF) manteve a denúncia de um homem por estelionato contra sua ex-companheira, que foi causada a financiar veículos e procurações para transferência de bens. Após assumir a posse dos carros, o réu revendeu os carros sem sair dos financiamentos, deixando uma vítima individualizada.</p>
+            
+          
+            <p>De acordo com a denúncia do Ministério Público (MP), o homem convenceu uma ex-companheira a financiar dois veículos e apresentou boletos falsos para simular o pagamento das parcelas. Com isso, conseguiu que ela assinasse documentos que lhe permitiram transferir os automóveis, que foram revendidos sem a quitação das dívidas. O MP argumentou que a conduta do réu configurava estelionato, pois ele utilizou meios fraudulentos para obter vantagem financeira ilícita.</p>
+            
+            <p>A defesa, por sua vez, tentou desqualificar a acusação, alegando que não havia provas do crime e que o caso tratava-se de um mero desacordo comercial. Além disso, sustentou que a vítima estava ciente das transações realizadas.</p>
+            
+          
+            <p>Em primeira instância, o homem foi condenado a um ano e quatro meses de reclusão em regime semiaberto, além do pagamento de 13 dias-multa. Ele recorreu ao TJ/DF, buscando a absolvição.</p>
+            
+            <p>O relator do caso, desembargador Asiel Henrique de Sousa, ressaltou que os crimes patrimoniais conferem especial relevância ao depoimento da vítima, sobretudo quando há provas que corroboram sua versão. No caso analisado, testemunhos e documentos reforçaram a materialidade e a autoria do crime, afastando a tese da defesa.</p>
+            
+           
+           <p> Além disso, o tribunal considera que as consequências do crime ainda persistem, uma vez que a vítima continua arcando com as prestações dos veículos que foram revendidos sem quitação. Também foram levados em conta os maus antecedentes do réu e as situações desfavoráveis ​​do caso.</p>
+
+           <p>Por unanimidade, a 1ª Turma Criminal negou provimento ao recurso e manteve a sentença, condenando o homem a cumprir um ano e quatro meses de prisão em regime semiaberto, além do pagamento da multa exigida.</p>
+
+           <p><strong>Processo:</strong> 0706050-85.2021.8.07.0004</p>
+
+        </article>
+           ">
+           <img src="../imagens/estelionato.jpg" alt="Imagem da notícia">
+           <h2 class="blog-title">TJ/DF Mantém Condenação de Homem por Estelionato Contra Ex-Companheira</h2>
+           <p class="blog-summary">A 1ª Turma Criminal do TJ/DF confirmou a reportagem de um homem que enganou uma ex-companheira para financiar veículos em seu nome, revendeu os bens e deixou a dívida para a vítima. A defesa alegou falta de provas, mas o tribunal considerou que os depoimentos e documentos comprovaram a fraude. O réu cumprirá pena de um ano e quatro meses de reclusão em regime semiaberto, além do pagamento de 13 dias-multa.</p>
+           <p class="blog-meta">Fonte: Migalhas - Data: 01/02/2025</p>
+           <a href="#" class="read-more" onclick="openNews(this)">Leia mais</a>
+       </div>
+       
+           
+            <div class="blog-card" data-title="STJ decide que acordo pode exonerar devedor de pensão alimentícia das parcelas vencidas" 
+                 data-content="
+                <article>
+                 <p>O direito aos alimentos é um tema recorrente nos tribunais, especialmente no que se refere à sua irrenunciabilidade. De modo geral, os alimentos oriundos do vínculo parental são considerados irrenunciáveis, enquanto aqueles decorrentes da conjugalidade (casamento ou união estável) podem ser objeto de renúncia. Contudo, surge uma dúvida: é possível negociar ou abrir mão das parcelas vencidas de pensão alimentícia?</p>
+                 
+             
+                 <p>A Terceira Turma do Superior Tribunal de Justiça (STJ) analisou recentemente essa questão ao julgar um recurso do Ministério Público contra um acordo firmado entre os pais de duas crianças. No caso, a mãe havia ingressado com uma ação de execução para cobrar 15 parcelas não pagas da pensão, mas posteriormente celebrou um acordo com o pai, abrindo mão da cobrança. O tribunal estadual validou a transação e extinguiu o processo, decisão que foi contestada pelo Ministério Público sob o argumento de que o caráter irrenunciável dos alimentos impediria a desistência da cobrança.</p>
+                 
+                 <p>O STJ, contudo, manteve a decisão de instância inferior, entendendo que a renúncia feita dizia respeito à dívida alimentar já vencida e não ao direito aos alimentos. O relator do caso, ministro Villas Bôas Cueva, explicou que a irrenunciabilidade se aplica ao direito de receber alimentos presentes e futuros, mas não às prestações já vencidas, que podem ser objeto de negociação. Segundo ele, o Código Civil permite que o credor deixe de exercer seu direito sobre valores já devidos, desde que não comprometa o sustento da alimentação.</p>
+                 
+                <p> O tribunal destacou ainda a importância do cultivo da autonomia das partes no direito de família, promovendo a autocomposição e a resolução amigável de litígios. No caso concreto, não houve comprovação de que a renúncia à dívida trouxe prejuízo para as crianças, motivo pelo qual o acordo foi considerado válido.</p>
+                 
+                 <p>Além disso, o STJ rejeitou a alegação do Ministério Público de que haveria conflito de interesses entre mães e filhos, exigindo a nomeação de um curador especial. Segundo o relator, essa questão não havia sido comprovada pela instância inferior, o que impediu sua apreciação pelo STJ, conforme determina a Súmula 211.</p>
+               
+                 <p>Com esta decisão, o tribunal reafirma a possibilidade de flexibilização na cobrança das parcelas vencidas da pensão alimentícia, garantindo um equilíbrio entre a proteção ao direito aos alimentos e a autonomia das partes para celebrar acordos, desde que respeitados os princípios do melhor interesse do alimentar.</p>
+                </article>
+                ">
+                <img src="../imagens/pensao.jpg" alt="Imagem da notícia">
+                <h2 class="blog-title">STJ decide que acordo pode exonerar devedor de pensão alimentícia das parcelas vencidas</h2>
+                <p class="blog-summary">O Superior Tribunal de Justiça (STJ) decidiu que é possível firmar acordo para exonerar o devedor de pensão alimentícia das parcelas vencidas sem ferir a irrenunciabilidade do direito aos alimentos. O tribunal destacou que a renúncia ao crédito das parcelas atrasadas não significa abrir mão do direito aos alimentos futuros, garantindo equilíbrio entre a autonomia das partes e a proteção dos beneficiários.</p>
+                <p class="blog-meta">Fonte: Estado de Direito - Data: 14/07/2020</p>
+                <a href="#" class="read-more" onclick="openNews(this)">Leia mais</a>
+            </div>
+
+            <div class="blog-card" data-title="Alienação Parental: O Que É, Como identificar e Quais as Consequências?" 
+            data-content="
+        <article>
+            <p>A alienação parental é uma prática prejudicial que afeta diretamente o desenvolvimento emocional e psicológico das crianças. Ocorre quando um dos genitores, ou até mesmo outros familiares responsáveis, influenciam a criança a repudiar o outro genitor sem justificativa, comprometendo o vínculo afetivo e gerando impactos negativos na convivência familiar.</p>
+
+            
+            <p>No Brasil, a Lei 12.318/2010 define a alienação parental e estabelece condutas que caracterizam essa prática, como campanhas de desqualificação do genitor, interferência do contato entre pai e filho, omissão de informações relevantes e falsas denúncias para impedir a convivência. Além disso, a mudança injustificada de domicílio para dificultar o acesso ao outro genitor também é considerada um ato de alienação.</p>
+
+           <p>Casos desse tipo são comuns em Varas de Família, especialmente em disputas judiciais envolvendo guarda e convivência. O grande desafio para os magistrados é diferenciar situações legítimas de alienação parental de falsas consideradas consideradas como estratégia processual. Em muitos casos, os genitores acusam o outro de alienação para se livrar de investigações ou impedir a convivência da criança por questões emocionais mal resolvidas.</p>
+
+  
+            <p>Diante desse cenário, a análise da alienação parental exige a participação de profissionais especializados, como assistentes sociais e psicólogos, para avaliar o impacto da situação sobre a criança e definir as melhores medidas a serem adotadas. O debate sobre a eficácia da Lei 12.318/2010 tem crescido, mas, na prática, a alienação parental continua sendo uma realidade que precisa ser combatida para garantir o direito da criança ao convívio saudável com ambos os genitores.</p>
+
+        </article>
+
+           ">
+                <img src="../imagens/alienacao.jpg" alt="Imagem da notícia">
+                <h2 class="blog-title">Alienação Parental: O Que É, Como identificar e Quais as Consequências?
+
+                </h2>
+                <p class="blog-summary">A alienação parental ocorre quando um dos genitores manipula uma criança para que a rejeite o outro, causando prejuízos emocionais e psicológicos. Prevista na Lei 12.318/2010, essa prática pode incluir campanhas de desqualificação, dificultação de contato e falsas denúncias. O tema é complexo e deve ser analisado com cautela pelos tribunais, com apoio de assistentes sociais e psicólogos para garantir o bem-estar da criança.</p>
+                <p class="blog-meta">Fonte: Jusbrasil - Data: 26/02/2010</p>
+                <a href="#" class="read-more" onclick="openNews(this)">Leia mais</a>
+            </div>
+
+
+          
+            <!-- Continue adicionando as outras notícias aqui seguindo o mesmo padrão -->
+        </div>
+    </div>
+
+    <!-- Página de notícia completa -->
+    <!-- Página de notícia completa -->
+<div class="news-page" id="news-page">
+    <div class="container">
+        <a href="#" id="back-to-home">← Voltar</a>
+        <h1 id="news-title"></h1>
+        <p id="news-content"></p>
+    </div>
+</div>
+
+<a href="../index.html" target="_self" style="text-decoration: none;"><button type="button" class="btn-inicio">Inicio</button></a>
+
+<script>
+    function openNews(element) {
+        const card = element.closest('.blog-card');
+        const title = card.getAttribute('data-title');
+        const content = card.getAttribute('data-content');
+
+        // Esconde a página inicial e mostra a notícia completa
+        document.querySelector('.container').style.display = 'none';
+        document.querySelector('.news-page').style.display = 'block';
+
+        // Define o conteúdo da notícia com HTML
+        document.getElementById('news-title').textContent = title;
+        document.getElementById('news-content').innerHTML = content;
+    }
+
+    document.getElementById('back-to-home').onclick = function() {
+        // Mostra a página inicial
+        document.querySelector('.container').style.display = 'block';
+        // Esconde a página da notícia
+        document.querySelector('.news-page').style.display = 'none';
+    };
+</script>
+
+</body>
+</html>
