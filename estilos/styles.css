@@ -503,7 +503,12 @@ background-position: center;
 
 .area-card:hover{
   background-color: #BB8F2D;
+  color: white;
 
+}
+
+.area-card:hover h3{
+  color: white;
 }
 
 /* Tamanho padrão dos textos */
