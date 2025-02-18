@@ -2,10 +2,13 @@
 
 .bandeira{
     flex-direction: row;
-    background-attachment: fixed;
     background-image: url(../imagens/banner.jpg);
-    background-position: bottom;  
-    height: 450px;
+    background-position: top;  
+    height: 600px;
+}
+
+.bandeira div{
+  width: 500px;
 }
 
 
@@ -31,6 +34,9 @@
     height: 700px;   
     }   
 
+.card-img{
+  height: 200px;
+}
 
 .cv-advogado{
   flex-direction: row;

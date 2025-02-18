@@ -5,6 +5,18 @@ nav.menu ul {
 }
 .bandeira{
     flex-direction: row;
+    background-image: url(../imagens/banner.jpg);
+  background-position: top;
+}
+
+.bandeira div{
+  position: absolute;  
+  top: 50%;
+  left: 25%; 
+  transform: translate(-30%, -50%);
+  width: 400px;
+  
+  
 }
 
 .imagem-destaque{
@@ -23,8 +35,13 @@ height: 700px;
 }
 
 
+
 .txt-advogado{
   width: 80%;
+}
+
+.card-img{
+  height: 200px;
 }
 
 

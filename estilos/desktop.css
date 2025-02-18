@@ -1,10 +1,15 @@
 @charset "UTF-8";
 
-.bandeira{
-    background-attachment: fixed;
-    height: 450px;
+.bandeira{ 
+    height: 600px;
+    background-image: url(../imagens/banner.jpg);
+    background-position: top;
 }
 
+
+.bandeira div{
+  width: 500px;
+}
 
 
 .areas{
